@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-700;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600
+           text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200
+           shadow-lg hover:shadow-red-500/50 hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply glass-panel hover:bg-white/10 text-white font-semibold py-3 px-6
+           rounded-lg transition-all duration-200 hover:scale-105;
+  }
+}
